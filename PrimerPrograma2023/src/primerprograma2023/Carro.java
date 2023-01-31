@@ -25,4 +25,11 @@ public class Carro {
         this.color = "No definido";
         this.anio = 0;
     }
+    //segundo constructor: constructor con dos parametros
+    public Carro(String marca, String modelo){
+        //inicializa los atributos
+        this.marca = marca;
+        this.modelo = modelo;
+        this.color = "No tiene"; this.anio = 0;
+    }
 }

@@ -25,6 +25,15 @@ public class PrimerPrograma2023 {
         Carro c2 = new Carro();
         System.out.println( "La marca de c2 es "+c2.marca );
         
+        Carro c3 = new Carro("Honda", "Civic");
+        System.out.println("Marca de c3: "+c3.marca);
+        System.out.println("Color de c3: "+c3.color);
+        
+        Punto p1 = new Punto(5, 4);
+        Punto p2 = new Punto(1,3);
+        //Punto p3 = new Punto(); no dejara porque exige el constr.
+                                 //con parametros
+        
     }
     
 }
