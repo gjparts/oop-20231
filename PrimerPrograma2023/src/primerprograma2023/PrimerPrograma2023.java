@@ -34,6 +34,14 @@ public class PrimerPrograma2023 {
         //Punto p3 = new Punto(); no dejara porque exige el constr.
                                  //con parametros
         
+        Persona pe1 = new Persona();
+        System.out.println(pe1.nombre);
+        
+        Persona pe2 = new Persona("Gerardo", 'M', 40);
+        System.out.println(pe2.nombre);
+        
+        Persona pe3 = new Persona("Josue", 'M', 40, 10000, true);
+        System.out.println(pe3.nombre);
     }
     
 }
