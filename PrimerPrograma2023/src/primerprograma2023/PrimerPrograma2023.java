@@ -42,6 +42,9 @@ public class PrimerPrograma2023 {
         
         Persona pe3 = new Persona("Josue", 'M', 40, 10000, true);
         System.out.println(pe3.nombre);
+        pe3.saludar();
+        pe3.despedirse(true);
+        pe3.despedirse(false);
     }
     
 }

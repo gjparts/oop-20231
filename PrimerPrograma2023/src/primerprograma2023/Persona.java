@@ -38,4 +38,36 @@ public class Persona {
         this.salario = salario;
         this.casado = casado;
     }
+    //metodos
+    /**
+     * Este metodo da un saludo.
+     */  
+    public void saludar(){
+        System.out.println("Hola mi nombre es "+this.nombre);
+    }
+    /**
+     * Este metodo da un mensaje de despedida.
+     * @param enIngles si le pone true se despide en ingles de lo contrario en español
+     */
+    public void despedirse(boolean enIngles){
+        if( enIngles == true )
+        {
+            System.out.println("Goodbye");
+        }
+        else
+        {
+            System.out.println("Adios.");
+        }
+    }
+    /**
+     * imprime un resumen de los datos de la persona
+     */
+    public void imprimir(){
+        System.out.println("********************");
+        System.out.println("Nombre: "+this.nombre);
+        System.out.println("Genero: "+( this.genero == 'M' ? "Masculino" : ( this.genero == 'F' ? "Femenino" : "N/A" ) )  );
+        System.out.println("Edad: "+this.edad);
+        System.out.println("Salario: "+this.salario);
+        System.out.println("Es Casado: "+( this.casado == true ? "Si" : "No" ) );
+    }
 }
