@@ -38,9 +38,18 @@ public class PrimerPrograma2023 {
         System.out.println(pe1.nombre);
         
         Persona pe2 = new Persona("Gerardo", 'M', 40);
-        System.out.println(pe2.nombre);
         
-        Persona pe3 = new Persona("Josue", 'M', 40, 10000, true);
+        try{
+            pe2.setEdad(-1);
+        }catch(Exception ex){
+            
+        }
+        
+        System.out.println(pe2.nombre);
+        System.out.println("imprimir persona 2:");
+        pe2.imprimir();
+        
+        Persona pe3 = new Persona("Josue", 'M', 20, 10000, true);
         System.out.println(pe3.nombre);
         pe3.saludar();
         pe3.despedirse(true);

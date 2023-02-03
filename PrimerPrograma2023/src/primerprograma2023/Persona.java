@@ -13,7 +13,7 @@ public class Persona {
     //atributos de la clase
     public String nombre;
     public char genero;
-    public int edad;
+    private int edad;
     public double salario;
     public boolean casado;
     //constructores
@@ -27,14 +27,14 @@ public class Persona {
     public Persona(String nombre, char genero, int edad){
         this.nombre = nombre;
         this.genero = genero;
-        this.edad = edad;
+        this.setEdad(edad); //la edad tiene reglas a traves de un set
         this.salario = 0;
         this.casado = false;
     }
     public Persona(String nombre, char genero, int edad, double salario, boolean casado){
         this.nombre = nombre;
         this.genero = genero;
-        this.edad = edad;
+        this.setEdad(edad); //la edad tiene reglas a traves de un set
         this.salario = salario;
         this.casado = casado;
     }
@@ -69,5 +69,36 @@ public class Persona {
         System.out.println("Edad: "+this.edad);
         System.out.println("Salario: "+this.salario);
         System.out.println("Es Casado: "+( this.casado == true ? "Si" : "No" ) );
+    }
+    /*
+    public void imprimir(){
+        //la misma funcion imprimir pero sin el operador ternario
+        System.out.println("********************");
+        System.out.println("Nombre: "+this.nombre);
+        
+        if( this.genero == 'M' )
+            System.out.println("Masculino");
+        else
+        {
+            if( this.genero == 'F' )
+                System.out.println("Femenino");
+            else
+                System.out.println("N/A");
+        }
+        
+        System.out.println("Edad: "+this.edad);
+        System.out.println("Salario: "+this.salario);
+        System.out.println("Es Casado: "+( this.casado == true ? "Si" : "No" ) );
+    }*/
+    //metodos get y set (para los atributos privados)
+    /**
+     * Asigna una edad a la persona
+     * @param edad debe ser un entero entre 0 y 200
+     */
+    public void setEdad(int edad){
+        if( edad >= 0 && edad <= 200 )
+            this.edad = edad;   //si se cumple entonces se escribe el atr.
+        else
+            throw new IllegalArgumentException("Edad debe estar entre 0 y 200");
     }
 }
