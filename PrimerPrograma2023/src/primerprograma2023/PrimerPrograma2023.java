@@ -39,6 +39,7 @@ public class PrimerPrograma2023 {
         
         Persona pe2 = new Persona("Gerardo", 'M', 40);
         
+        pe2.setEdad(35);
         try{
             pe2.setEdad(-1);
         }catch(Exception ex){
@@ -49,11 +50,17 @@ public class PrimerPrograma2023 {
         System.out.println("imprimir persona 2:");
         pe2.imprimir();
         
+        System.out.println("La edad de pe2 es "+pe2.getEdad());
+        
         Persona pe3 = new Persona("Josue", 'M', 20, 10000, true);
         System.out.println(pe3.nombre);
         pe3.saludar();
         pe3.despedirse(true);
         pe3.despedirse(false);
+        
+        pe3.setSalario(8000);
+        System.out.println("El salario de pe3 es "+pe3.getSalario());
+        pe3.imprimir();
     }
     
 }
