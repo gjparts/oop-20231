@@ -1,0 +1,25 @@
+Utilizando JAVA, crear una clase llamada CuentaAhorro
+
+En dicha clase se va a manejar una cuenta de ahorros.
+Los datos que se van a llevar son:
+* Nombre del cliente
+* Numero de la cuenta
+* Saldo de la cuenta (manejar numeros decimales)
+
+-> el nombre del cliente y el numero de la cuenta deben ser publicos
+-> el saldo de la cuenta debe ser privado
+-> ponerle un constructor sin parametros que inicialice el saldo de la cuenta de ahorro en cero.
+
+-> crear un metodo llamado depositar
+	* dicho método recibirá como parámetro el monto de dinero a depositar
+	* dicho metodo sumará al Saldo de la cuenta el monto recibido como 	  		  parámetro
+	* no debe permitirse depositar valores negativos.
+
+-> crear un metodo llamado retirar
+	* dicho método recibirá como parámetro el monto de dinero a retirar
+	* dicho metodo restará al Saldo de la cuenta el monto recibido como 
+       parámetro
+	* no debe permitirse retirar valores negativos.
+	* no debe permitirse retirar mas dinero del que tiene el saldo de la cuenta
+
+-> crear una método que permita obtener el saldo de la cuenta
