@@ -11,4 +11,53 @@ public class Persona {
     public Persona conyuge;
     public Persona[] hijos;
     public LinkedList<Persona> referencias;
+    //constructores
+    public Persona(String codigo, String nombre, String telefono, Direccion direccion){
+        this.codigo = codigo;
+        this.nombre = nombre;
+        this.telefono = telefono;
+        this.direccion = direccion;
+    }
+    //metodos
+    public void imprimir(){
+        System.out.println("******* Perfil *******");
+        System.out.println("Codigo: "+this.codigo);
+        System.out.println("Nombre: "+this.nombre);
+        System.out.println("Telefono: "+this.telefono);
+        System.out.print("Dirección: ");
+        if( this.direccion == null )
+            System.out.println("No viene");
+        else
+        {
+            System.out.println( this.direccion.colonia.tipo+" "+this.direccion.colonia.nombre );
+            System.out.println("Ave."+this.direccion.avenida+", calle: "+this.direccion.calle);
+            System.out.println("Casa: "+this.direccion.casa);
+            System.out.println("Referencias: "+this.direccion.referencias);
+        }
+        System.out.print("Empresa donde labora: ");
+        if( this.empresaLabora == null )
+            System.out.println("No determinada");
+        else
+        {
+            System.out.println( this.empresaLabora.nombre );
+            System.out.println( "Tel: "+this.empresaLabora.telefono );
+            System.out.println("Cargo desempeñado: "+this.cargo);
+        }
+        System.out.print("Conyuge: ");
+        if( this.conyuge == null )
+            System.out.println("No tiene");
+        else
+            System.out.println( this.conyuge.nombre );
+        //hijos (es un arreglo)
+        System.out.print("Hijos:");
+        if( this.hijos == null )
+            System.out.println("No tiene");
+        else
+        {
+            for( int i = 0; i < this.hijos.length; i++ )
+            {
+                System.out.println("Hijo "+(i+1)+": "+this.hijos[i].nombre);
+            }
+        }
+    }
 }
