@@ -49,14 +49,29 @@ public class Persona {
         else
             System.out.println( this.conyuge.nombre );
         //hijos (es un arreglo)
-        System.out.print("Hijos:");
+        System.out.print("Hijos: ");
         if( this.hijos == null )
             System.out.println("No tiene");
         else
         {
+            System.out.println("");
             for( int i = 0; i < this.hijos.length; i++ )
             {
-                System.out.println("Hijo "+(i+1)+": "+this.hijos[i].nombre);
+                if( this.hijos[i] != null )
+                    System.out.println("\tHijo "+(i+1)+": "+this.hijos[i].nombre);
+            }
+        }
+        //referencias personales
+        System.out.print("Referencias Personales: ");
+        if( this.referencias == null )
+            System.out.println("No tiene");
+        else
+        {
+            System.out.println("");
+            for( int i = 0; i < this.referencias.size(); i++ )
+            {
+                if( this.referencias.get(i) != null )
+                    System.out.println("\tReferencia "+(i+1)+": "+this.referencias.get(i).nombre);
             }
         }
     }
