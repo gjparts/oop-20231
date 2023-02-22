@@ -23,6 +23,14 @@ public class Herencia20231 {
         em1.saludar();
         em1.trabajar();
         
+        Catedratico c1 = new Catedratico("Alicia Cobra", 15000, "Ing. Electrico");
+        c1.educar();
+        c1.saludar();
+        c1.trabajar();
+        
+        Praticante pr1 = new Praticante("Juanito Caminante", 50, 3);
+        pr1.saludar();
+        pr1.trabajar();
     }
     
 }
