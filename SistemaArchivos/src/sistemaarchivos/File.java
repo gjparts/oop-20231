@@ -9,8 +9,10 @@ package sistemaarchivos;
  *
  * @author Gerardo
  */
+import java.text.SimpleDateFormat;
 import java.util.Calendar;
-public class File {
+
+public class File {   
     //atributos
     public String name;
     public int size;
@@ -41,8 +43,13 @@ public class File {
         if( this.creationDate == null )
             str += "unknown";
         else
-            str += this.creationDate.toString();
-        
+        {
+            //convertir la fecha del Calendar en formato de fecha legible
+            //this.creationDate.add(Calendar.MONTH, -1);
+            SimpleDateFormat f = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss a");
+            str += f.format(this.creationDate.getTime());
+        }
+            
         return str;
         /*System.out.println("***** FILE *****");
         System.out.println("name: "+this.name);

@@ -18,7 +18,7 @@ public class SistemaArchivos {
     public static void main(String[] args) {
         //crear un objeto feca
         Calendar f1 = Calendar.getInstance();
-        f1.set(2023, 2, 28, 9, 52, 59);
+        f1.set(2023, 1, 28, 17, 52, 59);
         
         
         File a1 = new File("prueba.docx", 150123, "docx", f1);
