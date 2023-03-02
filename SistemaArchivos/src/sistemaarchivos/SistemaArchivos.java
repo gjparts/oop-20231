@@ -23,6 +23,7 @@ public class SistemaArchivos {
         
         File a1 = new File("prueba.docx", 150123, "docx", f1);
         System.out.println( a1.toString() );
+        
     }
     
 }

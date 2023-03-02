@@ -31,6 +31,8 @@ public class File {
     public String getType(){
         return type;
     }
+    
+    @Override
     public String toString(){
         String str;
         str = "***** FILE *****";
