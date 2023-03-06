@@ -19,4 +19,14 @@ public class Document extends File {
         this.words = 0;
     }
     //crear el otro constructor full parametros
+    public Document(String name, int size, String extension, Calendar creationDate,
+                    Author author, Calendar modificationDate, int words){
+        //construir la super clase
+        super(name, size, extension, creationDate);
+        
+        //atributos de la clase hijo
+        this.author = author;
+        this.modificationDate = modificationDate;
+        this.words = words;
+    }
 }
