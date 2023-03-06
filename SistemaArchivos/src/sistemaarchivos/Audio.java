@@ -12,6 +12,7 @@ public class Audio extends Media {
                  String artist, String album, int year, int track){
         //construir la super clase
         super(name, size, extension, creationDate, author, duration);
+        this.setType("Audio File");   //super.setType("Audio File");
         //inicalizar los atributos de la clase hijo
         this.artist = artist;
         this.album = album;

@@ -10,6 +10,7 @@ public class Video extends Media {
     public Video(String name, int size, String extension){
         //construir la super clase
         super(name, size, extension, null, null, 0);
+        this.setType("Video File");   //super.setType("Video File");
         
         //llenar los atributos
         this.codec = "unknown";

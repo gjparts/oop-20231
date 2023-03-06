@@ -13,6 +13,7 @@ public class Document extends File {
         //para consutruir la super clase entonces le ponemos valores
         //default como parametros.
         super("unknown name", 0, "", null);
+        this.setType("Document");   //super.setType("Document");
         //atributos de clase hijo
         this.author = null;
         this.modificationDate = null;
@@ -23,6 +24,7 @@ public class Document extends File {
                     Author author, Calendar modificationDate, int words){
         //construir la super clase
         super(name, size, extension, creationDate);
+        this.setType("Document");   //super.setType("Document");
         
         //atributos de la clase hijo
         this.author = author;
