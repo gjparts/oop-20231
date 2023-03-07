@@ -10,6 +10,7 @@ package sistemaarchivos;
  * @author Gerardo
  */
 import java.util.Calendar;
+import java.util.LinkedList;
 public class SistemaArchivos {
 
     /**
@@ -51,8 +52,23 @@ public class SistemaArchivos {
         v1.codec = "Matroska Video";
         v1.creationDate = f2;
         v1.author = new Author("Cuevana 3","cuevana3.org","");
-        System.out.println(v1.toString());
         
+        //pistas de audio del video
+        //v1.audio = new String[]{"Español", "English"}; //otra forma de hacerlo
+        String arreglo1[] = { "Español", "English" };
+        v1.audio = arreglo1;
+        
+        //subtitulos del video
+        Author au7 = new Author("Gnula","gnula.org","");
+        Subtitle s1 = new Subtitle("Español", au7 );
+        
+        v1.subtitles = new LinkedList();
+        v1.subtitles.add(s1);
+        v1.subtitles.add( new Subtitle("English", au7) );
+               
+        System.out.println(v1.toString());
+        System.out.println(v1.subtitles.get(0).author.nombre);
+                
         //crear un audio mas
         Audio aud2 = new Audio("Damage Inc.",123456,"mp3", null,
                                 new Author("Capitan Nemo","",""), 512000,
