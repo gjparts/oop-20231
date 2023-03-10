@@ -19,4 +19,9 @@ public class Audio extends Media {
         this.year = year;
         this.track = track;
     }
+    //metodos
+    @Override
+    public String toString(){
+        String str = super.toString();
+    }
 }
